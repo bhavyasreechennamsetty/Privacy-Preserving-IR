@@ -32,24 +32,4 @@ The system allows a **client with private test data** to obtain model prediction
     - Feature importance
 - Tested with `pytest`
 
----
 
-## Architecture
-
-```mermaid
-flowchart LR
-    subgraph Client["Client (Streamlit UI)"]
-        U[Upload private test.csv<br>and public train.csv]
-        Cfg[Choose model & params]
-        Req[Call /run_pipeline]
-        Viz[Visualize metrics<br>(ROC, CM, FI)]
-    end
-
-    subgraph Server["Server (FastAPI + Crypto Pipeline)"]
-        API[FastAPI /run_pipeline]
-        Core[crypto_pipeline.py<br>(Paillier + ML models)]
-        Model[Trained ML Model]
-    end
-
-    U --> Cfg --> Req --> API --> Core --> Model
-    Model --> Core --> API --> Viz
