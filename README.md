@@ -1,5 +1,6 @@
 # Privacy-Preserving Machine Learning with Homomorphic Encryption
 Video Explanation :https://drive.google.com/file/d/1HMtjD67HKCzwowrguSUqY68RV86fdaXF/view?usp=sharing
+medium blog: https://medium.com/@bhavyasree_chennamsetty/privacy-preserving-machine-learning-with-homomorphic-encryption-923a7c94b1e2
 This project implements a **client–server privacy-preserving ML system** using:
 
 - **Paillier Homomorphic Encryption**
